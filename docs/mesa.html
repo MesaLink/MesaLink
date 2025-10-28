@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>MesaLink — Mesa</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#06b6d4">
+</head>
+<body>
+<div class="app-full">
+<header class="topbar">
+<div class="brand-small">MesaLink</div>
+<div id="user-info" class="user-info"></div>
+</header>
+
+
+<main class="layout">
+<aside class="panel participants-panel">
+<div class="panel-header">Mesa <span id="table-code">—</span></div>
+<ul id="participants-list" class="participants-list"></ul>
+<div class="host-controls" id="host-controls"></div>
+</aside>
+
+
+<section class="panel menu-panel">
+<div class="panel-header">Cardápio</div>
+<div id="menu-list" class="menu-list"></div>
+</section>
+
+
+<aside class="panel cart-panel">
+<div class="panel-header">Pedido</div>
+<div id="cart-list" class="cart-list"></div>
+<div class="cart-footer">
+<label>Gorjeta (%) <input id="tip-input" type="number" min="0" value="10" /></label>
+<button id="btn-calc" class="wide">Calcular divisão</button>
+<div id="totals" class="totals"></div>
+</html>

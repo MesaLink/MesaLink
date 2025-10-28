@@ -1,7 +1,7 @@
 {
 "restaurant": {
 "id": "rest1",
-"name": "Restaurante Demo",
+"name": "Restaurante",
 "tables": [
 { "code": "TABLE5", "label": "Mesa 5" },
 { "code": "TABLE1", "label": "Mesa 1" }

@@ -1,30 +1,26 @@
-# MesaLink - Demo
+# MesaLink
 
 
-Demo minimalista do MesaLink (HTML/CSS/JS) pronta para publicar no GitHub Pages.
+Versão front-end demo para apresentação — apenas HTML/CSS/JS (pode ser hospedada no GitHub Pages apontando para a pasta `docs/`).
 
 
 Como usar:
 1. Publique o repositório no GitHub.
 2. Ative GitHub Pages apontando para a pasta `docs/` (branch `main` / `docs` folder).
-3. Acesse a URL gerada a partir do telefone.
+3. Acesse a URL gerada do GitHub Pages a partir do celular.
 
 
-Credenciais de teste (fictícias):
+Credenciais de teste:
 - Hugo / 1123581321
 - Chrysthian / 1123581321
 - Rafael / 1123581321
-- Admin (Versão Restaurante) / 1123581321
+- Admin (restaurante) / 1123581321
 
 
-Arquivos principais:
-- `docs/index.html` — versão usuário (login + fluxo de mesa)
-- `docs/restaurant.html` — versão restaurante (ver mesas e pedidos)
-- `docs/users.json` — "DB" de usuários de teste
-- `docs/restaurant.json` — "DB" do restaurante e cardápio
-- `docs/styles.css`, `docs/app.js` — frontend
-
-
-Observações:
-- É um demo front-end; não há backend real nem pagamentos.
-- Para testes reais, hospede em GitHub Pages para evitar problemas com `fetch` de arquivos locais.# MesaLink
+Arquivos principais na pasta `docs/`:
+- `index.html` — tela de login (redireciona para `mesa.html`)
+- `mesa.html` — interface do usuário (mesa virtual, cardápio, pedidos)
+- `restaurant.html` — painel do restaurante (lista de mesas/pedidos)
+- `styles.css`, `app.js` — código principal
+- `users.json`, `restaurant.json` — "DB" em JSON
+- `manifest.json`, `service-worker.js`, `icons/` — PWA

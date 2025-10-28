@@ -15,7 +15,6 @@
 <div id="user-info" class="user-info"></div>
 </header>
 
-
 <main class="layout">
 <aside class="panel participants-panel">
 <div class="panel-header">Mesa <span id="table-code">—</span></div>
@@ -23,12 +22,10 @@
 <div class="host-controls" id="host-controls"></div>
 </aside>
 
-
 <section class="panel menu-panel">
 <div class="panel-header">Cardápio</div>
 <div id="menu-list" class="menu-list"></div>
 </section>
-
 
 <aside class="panel cart-panel">
 <div class="panel-header">Pedido</div>
@@ -37,4 +34,20 @@
 <label>Gorjeta (%) <input id="tip-input" type="number" min="0" value="10" /></label>
 <button id="btn-calc" class="wide">Calcular divisão</button>
 <div id="totals" class="totals"></div>
+</div>
+</aside>
+</main>
+
+<footer class="bottombar">
+<small class="muted">MesaLink Demo v0.1 - Sistema de Divisão Inteligente</small>
+</footer>
+</div>
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) { 
+  navigator.serviceWorker.register('service-worker.js').catch(()=>{}); 
+}
+</script>
+</body>
 </html>

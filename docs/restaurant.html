@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MesaLink — Restaurante (Demo)</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
+<meta name="theme-color" content="#3b82f6">
+
+</head>
+<body>
+<main class="container">
+<header class="brand">MesaLink — Versão Restaurante</header>
+
+
+<section id="rest-login" class="card">
+<h2>Login Restaurante</h2>
+<label>Usuário</label>
+<input id="rest-username" placeholder="Admin" />
+<label>Senha</label>
+<input id="rest-password" type="password" />
+<button id="rest-login-btn">Entrar</button>
+<div class="muted">User: Admin, senha: 1123581321</div>
+</section>
+
+
+<section id="rest-dashboard" class="card hidden">
+<h2>Mesas Ativas</h2>
+<ul id="active-sessions"></ul>
+</section>
+
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

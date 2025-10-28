@@ -1,0 +1,24 @@
+:root{
+--bg:#0f1724; /* dark */
+--card:#0b1220;
+--accent:#06b6d4;
+--muted:#9ca3af;
+--glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071027 0%, #071a2a 100%); color:#e6eef6; margin:0; padding:16px;}
+.container{max-width:720px;margin:0 auto}
+.brand{font-size:20px;font-weight:700;padding:12px 0;text-align:center}
+.card{background:var(--card); padding:16px;border-radius:12px; margin-bottom:12px; box-shadow: 0 6px 18px rgba(2,6,23,0.6)}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;margin:6px 0}
+button{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#002428;border:none;font-weight:600;margin-top:8px}
+.hidden{display:none}
+.muted{color:var(--muted);font-size:13px;margin-top:8px}
+.participants ul, .menu ul, .cart ul, #active-sessions{list-style:none;padding:0;margin:0}
+.participants li, .menu li, .cart li, #active-sessions li{padding:8px;border-radius:8px;margin-bottom:6px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+.small{font-size:12px}
+.session-header{display:flex;justify-content:space-between;align-items:center}
+.menu li button{margin-left:8px}
+.cart-actions{display:flex;gap:12px;align-items:center;margin-top:8px}
+.totals{margin-top:12px;background:rgba(255,255,255,0.02);padding:12px;border-radius:8px}
+@media (max-width:480px){body{padding:10px}.brand{font-size:18px}.card{padding:12px}}

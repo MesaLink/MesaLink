@@ -1,0 +1,19 @@
+{
+"restaurant": {
+"id": "rest1",
+"name": "Restaurante Demo",
+"tables": [
+{ "code": "TABLE5", "label": "Mesa 5" },
+{ "code": "TABLE1", "label": "Mesa 1" }
+],
+"menu": [
+{ "id": "m1", "name": "Pizza (grande)", "price": 100.00, "splitable": true },
+{ "id": "m2", "name": "Refil Refrigerante", "price": 15.00, "splitable": false },
+{ "id": "m3", "name": "Salgado", "price": 10.00, "splitable": false },
+{ "id": "m4", "name": "Batata Fritas", "price": 25.00, "splitable": false }
+],
+"settings": {
+"default_tip_percent": 10
+}
+}
+}

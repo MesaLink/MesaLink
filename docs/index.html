@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MesaLink — Usuário (Demo)</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="manifest" href="manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+  }
+</script>
+<meta name="theme-color" content="#3b82f6">
+
+</head>
+<body>
+<main class="container">
+<header class="brand">MesaLink (Demo)</header>
+
+
+<section id="login-section" class="card">
+<h2>Login</h2>
+<label>Usuário</label>
+<input id="username" placeholder="Hugo" />
+<label>Senha</label>
+<input id="password" type="password" placeholder="senha" />
+<button id="btn-login">Entrar</button>
+<div class="muted">Use Hugo / Chrysthian / Rafael — senha: 1123581321</div>
+</section>
+
+
+<section id="join-section" class="card hidden">
+<h2>Entrar na mesa</h2>
+<label>Código da mesa (ex: TABLE5)</label>
+<input id="table-code" placeholder="TABLE5" />
+<button id="btn-join">Entrar na mesa</button>
+<div class="muted">Ou simule QR: digite TABLE5</div>
+</section>
+
+
+<section id="session-section" class="card hidden">
+<div class="session-header">
+<h2 id="session-title">Mesa</h2>
+<div>Host: <span id="session-host"></span></div>
+</div>
+
+
+<div class="participants">
+<h3>Participantes</h3>
+<ul id="participants-list"></ul>
+</div>
+
+
+<div class="menu">
+<h3>Cardápio</h3>
+<ul id="menu-list"></ul>
+</div>
+
+
+<div class="cart">
+<h3>Pedido</h3>
+<ul id="cart-list"></ul>
+<div class="cart-actions">
+<label>Gorjeta (%) <input id="tip-input" type="number" min="0" value="10" /></label>
+<button id="btn-calc">Calcular divisão</button>
+</div>
+<div id="totals" class="totals hidden"></div>
+</div>
+
+
+</section>
+
+
+<footer class="small muted">Demo front-end — nenhum pagamento real</footer>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>

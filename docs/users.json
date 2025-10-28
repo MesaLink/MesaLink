@@ -1,0 +1,8 @@
+{
+"users": [
+{ "username": "Hugo", "password": "1123581321", "displayName": "Hugo" },
+{ "username": "Chrysthian", "password": "1123581321", "displayName": "Chrysthian" },
+{ "username": "Rafael", "password": "1123581321", "displayName": "Rafael" },
+{ "username": "Admin", "password": "1123581321", "displayName": "Admin", "role": "restaurant" }
+]
+}

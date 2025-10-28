@@ -1,69 +1,3 @@
-const isHost = currentSession.host === currentUser.username;
-
-// Display table info
-tableCode.textContent = `${currentSession.tableLabel} (${currentSession.tableCode})`;
-
-// Display participants
-function renderParticipants() {
-  participantsList.innerHTML = currentSession.participants
-    .map(
-      (p) => `
-      <li>
-        ${p.displayName} 
-        ${
-          p.username === currentSession.host
-            ? '<span class="host-badge">HOST</span>'
-            : ""
-        }
-      </li>
-    `
-    )
-    .join("");
-}
-
-// Host controls
-if (isHost) {
-  hostControls.innerHTML = `
-      <button id="btn-end-session" style="width:100%;background:#ef4444;margin-top:12px">Encerrar Mesa</button>
-      <button id="btn-change-host" style="width:100%;background:rgba(255,255,255,0.1);margin-top:8px">Transferir Anfitrião</button>
-    `;
-
-  $("btn-end-session").addEventListener("click", () => {
-    if (confirm("Encerrar a mesa para todos?")) {
-      const sessions = loadSessions();
-      delete sessions[currentSession.tableCode];
-      saveSessions(sessions);
-      localStorage.removeItem("mesalink_current_user");
-      alert("Mesa encerrada!");
-      window.location.href = "./index.html";
-    }
-  });
-
-  $("btn-change-host").addEventListener("click", () => {
-    const others = currentSession.participants.filter(
-      (p) => p.username !== currentUser.username
-    );
-    if (others.length === 0) {
-      alert("Não há outros participantes na mesa");
-      return;
-    }
-
-    const options = others
-      .map((p, i) => `${i + 1}. ${p.displayName}`)
-      .join("\n");
-    const choice = prompt(
-      `Transferir anfitrião para:\n\n${options}\n\nDigite o número:`
-    );
-
-    const idx = parseInt(choice) - 1;
-    if (idx >= 0 && idx < others.length) {
-      currentSession.host = others[idx].username;
-      saveSessions(sessions);
-      alert(`${others[idx].displayName} agora é o anfitrião!`);
-      window.location.reload();
-    }
-  });
-} // MesaLink — front-end JS (login, mesa, restaurante)
 (function () {
   // util
   const $ = (id) => document.getElementById(id);
@@ -933,5 +867,6 @@ if (isHost) {
 
     // Auto-refresh every 5 seconds
     setTimeout(renderActiveSessions, 5000);
-  }
-})();
+
+  } // fecha window.closePaymentModal
+})(); // fecha a função principal (IIFE)
